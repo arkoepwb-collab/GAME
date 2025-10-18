@@ -1,0 +1,86 @@
+/* 整體畫面置中與背景顏色 */
+body {
+  /* background-color: purple; /* 移除原本的背景色 */
+  background-image: url('thai_pattern_background.jpg'); /* 新增泰國風格背景圖 */
+  background-size: cover; /* 覆蓋整個視窗 */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: "Noto Sans Thai", "微軟正黑體", sans-serif; /* 新增泰文字體 */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 增加文字陰影 */
+}
+
+/* 標題設計 */
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.8em; /* 稍微加大標題 */
+  text-shadow: 3px 3px 8px gold, -3px -3px 8px darkred; /* 調整標題陰影 */
+  color: #FFD700; /* 金色 */
+  letter-spacing: 2px;
+}
+
+/* 記分板樣式 */
+#score {
+  margin-bottom: 15px;
+  font-size: 1.6em; /* 加大記分板 */
+  font-weight: bold;
+  color: #FF6347; /* 番茄紅 */
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: 2px solid gold;
+}
+
+/* 遊戲畫布邊框 */
+#gameCanvas {
+  border: 5px solid #FFD700; /* 華麗的金色邊框 */
+  background-color: rgba(128, 0, 128, 0.3); /* 半透明紫色，讓背景圖透出 */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* 金色發光效果 */
+}
+
+/* 按鈕樣式 */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px; /* 更圓潤的按鈕 */
+  background-color: #FFD700; /* 金色 */
+  color: #8B0000; /* 暗紅色字體 */
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #FFA500; /* 橘色 */
+  transform: translateY(-3px); /* 稍微上浮效果 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 遊戲結束畫面 */
+#gameOver {
+  display: none;
+  position: absolute;
+  top: 50%; /* 調整置中 */
+  left: 50%;
+  transform: translate(-50%, -50%); /* 確保精確置中 */
+  background: rgba(139, 0, 0, 0.85); /* 暗紅色的半透明背景 */
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+  border: 4px solid gold; /* 金色邊框 */
+  box-shadow: 0 0 30px gold; /* 金色發光 */
+}
+
+#gameOver h2 {
+  font-size: 2.5em;
+  color: #FFD700; /* 金色 */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
